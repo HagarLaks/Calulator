@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="src/main.css">
     <title>Calculater</title>
    
     
@@ -21,37 +21,37 @@
                 
                 <div class="left">
                     
-                    <div class="button" id="info">info</div>
-                    <div class="button" id="darkmode" onclick="displayButtonInfo()">lightdark</div>
-                    <div class="button" id="clock">clock</div>
-                    <div class="button" id="root">root</div>
-                    <div class="button" id="cloud">cloud</div>
-                    <div class="empty">empty</div>
-                    <div class="empty">empty</div>
+                    <div class="button func" id="info">info</div>
+                    <div class="button func" id="darkmode"  >lightdark</div>
+                    <div class="button func" id="clock">clock</div>
+                    <div class="button operator" id="root">root</div>
+                    <div class="button func" id="cloud">cloud</div>
+                    <div class="empty"></div>
+                    <div class="empty"></div>
                 </div>
                   <div class="calcscreen">
                     
                         <div  id="topline">my calculator</div> 
                         <div id="thescreen">screen</div>
-                        <div class="button" id="c">c</div> 
+                        <div class="button operator" id="c">c</div> 
                              
                 </div> 
                  <div class="nums">
                     
-                        <div class="button" id="7">7</div><div class="button" id="8" >8</div><div class="button" id="9">9</div>
-                        <div class="button" id="4">4</div><div class="button" id="5">5</div><div class="button" id="6">6</div>
-                        <div class="button" id="1">1</div><div class="button" id="2">2</div><div class="button" id="3">3</div>
-                        <div class="button" id="+-">+-</div><div class="button" id="0">0</div><div class="button" id=".">.</div>
+                        <div class="button digits" id="7">7</div><div class="button digits" id="8" >8</div><div class="button digits" id="9">9</div>
+                        <div class="button digits" id="4">4</div><div class="button digits" id="5">5</div><div class="button digits" id="6">6</div>
+                        <div class="button digits" id="1">1</div><div class="button digits" id="2">2</div><div class="button digits" id="3">3</div>
+                        <div class="button operator" id="+-">+-</div><div class="button digits" id="0">0</div><div class="button operator" id=".">.</div>
                  </div>
                  <div class="right">
                     
-                        <div class="button" id="settings">settings</div>
-                        <div class="button" id="back">back</div>
-                        <div class="button" id="/">/</div>
-                        <div class="button" id="X">X</div>
-                        <div class="button" id="-">-</div>
-                        <div class="button" id="+">+</div>
-                        <div class="button" id="=">=</div>
+                        <div class="button func" id="settings">settings</div>
+                        <div class="button func" id="back">back</div>
+                        <div class="button operator" id="/">/</div>
+                        <div class="button operator" id="X">X</div>
+                        <div class="button operator" id="-">-</div>
+                        <div class="button operator" id="+">+</div>
+                        <div class="button operator" id="=">=</div>
                  </div>
                 </div>
                 <div class="scientific">
@@ -62,6 +62,7 @@
             </div>
 
         </div>    
-        <script src="./main.js"></script>
+        <script src="./ts/application.js"></script>
+        <script src="./ts/calculator.js"></script>
 </body>
 </html>

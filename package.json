@@ -4,11 +4,26 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "sass src/wordle.scss src/wordle.css",
+    "dev-server": "http-server src",
+    "dev-sass": "sass src/main.scss src/main.css --watch",
+    "dev": "npm run dev-server & npm run dev-sass",
+    "start": "echo \"No start script\" && exit 0",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HagarLaks/Calulator"
+  },
+  "author": "Hagar",
   "license": "ISC",
-  "dependencies": {
-    "http-server": "^14.1.1"
+  "bugs": {
+    "url": "https://github.com/HagarLaks/Calulator/issues"
+  },
+  "homepage": "https://github.com/HagarLaks/Calulator#readme",
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "live-server": "^1.2.2",
+    "sass": "^1.56.1"
   }
 }
