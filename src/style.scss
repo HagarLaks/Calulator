@@ -40,8 +40,17 @@ body {
     
 }
 
-.dark .maincalc .calcscreen{
-    background-color: rgb(240, 216, 0);
+
+
+.dark .maincalc .calcscreen #thescreen{
+    background-color: rgb(232, 240, 0);
+    
+    color: black
+    
+}
+
+.dark .maincalc .calcscreen {
+    background-color: rgb(31, 131, 231);
     color: black
     
 }
@@ -83,10 +92,13 @@ body {
     height: 100%;
 
 }
+.left> div:hover {
+    background-color: cornflowerblue;
+}
 
 div {
     border-color: rgb(0, 0, 0);
-    border-width: 1px;
+    border-width: 1.5px;
     border-style: solid;
     height: inherit;
     align-items: center;
@@ -101,7 +113,9 @@ div {
     height: 100%;
     
 }
-
+.right> div:hover {
+    background-color: cornflowerblue;
+}
 .calcscreen {
     grid-area: screencalc;
     background-color: aquamarine;
@@ -113,6 +127,12 @@ div {
     
 
 }
+#thescreen {
+    background-color: silver;
+    border-style: solid;
+    border-width: 3px;
+    
+}
 .nums {
     grid-area: numbers;
     display: grid;
@@ -122,6 +142,9 @@ div {
     text-align: center;
     align-items: center;
 
+}
+.nums > div:hover {
+    background-color: cornflowerblue;
 }
 
 .scientific {

@@ -1,19 +1,58 @@
-let currentVal = '';
-let firstOperand;
-let currentOperand = '';
-let secondOperand;
-// document.getElementById("1").onclick = function () { displayButtonInfo('1'); };
-// let digits = document.querySelectorAll('.digits')
-// function getDigits(digit:string) {
-// currentVal += digits[]
-// }
-// for (let i = 0; i < digitsCol.length; i++) {digitsCol[i].addEventListener('click', curVal+digitsCol[i].id)};
+//flags:
+let state = {
+    currentVal: '',
+    firstOperand: null,
+    currentOperand: null,
+    secondOperand: null,
+};
 const digits = document.querySelectorAll('.digits');
+function addToCurrentVal(value) {
+    state.currentVal = state.currentVal + value.id;
+    alert(state.currentVal);
+    console.log(state.currentVal);
+}
 digits.forEach(digit => {
     digit.addEventListener('click', function handleClick(event) {
-        console.log(currentVal, event);
-        currentVal = currentVal + digit.id;
-        alert(currentVal);
-        console.log(currentVal);
+        console.log(state.currentVal, event);
+        if (state.firstOperand != null) {
+            state.currentVal = state.currentVal + state.firstOperand;
+            state.firstOperand = null;
+            console.log(state.currentVal);
+        }
+        else {
+            addToCurrentVal(digit);
+        }
     });
 });
+function updateFirstOperator(value) {
+    state.firstOperand = value.id;
+    alert(state.firstOperand);
+    console.log(state.firstOperand);
+}
+const boperators = document.querySelectorAll('.boperator');
+boperators.forEach(boperator => {
+    boperator.addEventListener('click', function handleClick(event) {
+        console.log(state.firstOperand, event);
+        updateFirstOperator(boperator);
+    });
+});
+const decpoint = document.getElementById('.');
+decpoint.addEventListener('click', function decpointpressed(event) {
+    if (state.currentVal.length === 0) {
+        state.currentVal = '0.';
+    }
+    else {
+        if (state.currentVal.includes('.')) {
+            alert('invalid');
+        }
+        else {
+            state.currentVal = state.currentVal + '.';
+        }
+    }
+});
+const evalBtn = document.getElementById('=');
+function evalClicked() {
+    state.currentVal = eval(state.currentVal);
+    console.log(state.currentVal);
+}
+evalBtn.addEventListener('click', evalClicked);
