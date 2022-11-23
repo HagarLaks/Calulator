@@ -3,13 +3,13 @@
 function displayButtonInfo(value) {
     alert(value);
 }
-document.getElementById("clock").addEventListener('click', function () { displayButtonInfo(document.getElementById("clock").id); });
-document.getElementById("darkmode").onclick = function () { displayButtonInfo('darkmode'); };
+document.getElementById("delhistory").addEventListener('click', function () { displayButtonInfo(document.getElementById('delhistory').id); });
+// document.getElementById("darkmode").onclick = function () { displayButtonInfo('darkmode'); };
 document.getElementById("root").onclick = function () { displayButtonInfo('root'); };
 document.getElementById("cloud").onclick = function () { displayButtonInfo('cloud'); };
-document.getElementById("back").onclick = function () { displayButtonInfo('back'); };
+// document.getElementById("back").onclick = function () { displayButtonInfo('back'); };
 document.getElementById("settings").onclick = function () { displayButtonInfo('settings'); };
-document.getElementById("c").onclick = function () { displayButtonInfo('c'); };
+// document.getElementById("c").onclick = function () { displayButtonInfo('c'); };
 //part one alers:
 // document.getElementById("1").onclick = function () { displayButtonInfo('1'); };
 // document.getElementById("2").onclick = function () { displayButtonInfo('2'); };
@@ -26,7 +26,7 @@ document.getElementById("c").onclick = function () { displayButtonInfo('c'); };
 // document.getElementById("/").onclick = function () { displayButtonInfo('/'); };
 // document.getElementById("X").onclick = function () { displayButtonInfo('X'); };
 // document.getElementById(".").onclick = function () { displayButtonInfo('.'); };
-document.getElementById("=").onclick = function () { displayButtonInfo('='); };
+// document.getElementById("=").onclick = function () { displayButtonInfo('='); };
 // document.getElementById("0").onclick = function () { displayButtonInfo('0'); };
 document.getElementById("+-").onclick = function () { displayButtonInfo('+-'); };
 document.getElementById("darkmode").onclick = function () { changemode(); };
