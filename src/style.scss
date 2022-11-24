@@ -13,6 +13,37 @@ html {
 body {
     height: 100%;
     width: 100%;
+    .container {
+        
+    .dark {
+        .maincalc {
+            background-color: darkslategrey;
+            color: azure;
+            }
+        .maincalc .calcscreen #thescreen{
+            background-color: rgb(232, 240, 0);
+        
+            color: black
+        
+            }
+        .maincalc .calcscreen {
+        background-color: rgb(31, 131, 231);
+        color: black
+        
+            }
+        .scientific {
+
+            background-color: darkslategrey;
+            color: azure;
+        }
+        .history {
+
+        background-color: darkslategrey;
+        color: azure;
+        }
+    
+        }
+    }
 }
 
 .container {
@@ -37,38 +68,9 @@ body {
     border-style: solid;
 }
 
-.dark .maincalc {
-    background-color: darkslategrey;
-    color: azure;
-    
-}
 
 
 
-.dark .maincalc .calcscreen #thescreen{
-    background-color: rgb(232, 240, 0);
-    
-    color: black
-    
-}
-
-.dark .maincalc .calcscreen {
-    background-color: rgb(31, 131, 231);
-    color: black
-    
-}
-
-.dark .scientific {
-
-    background-color: darkslategrey;
-    color: azure;
-}
-
-.dark .history {
-
-    background-color: darkslategrey;
-    color: azure;
-}
 
 .maincalc {
     background-color: rgb(118, 209, 209);

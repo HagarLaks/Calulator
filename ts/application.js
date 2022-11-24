@@ -5,7 +5,7 @@ function displayButtonInfo(value) {
 }
 document.getElementById("delhistory").addEventListener('click', function () { displayButtonInfo(document.getElementById('delhistory').id); });
 // document.getElementById("darkmode").onclick = function () { displayButtonInfo('darkmode'); };
-document.getElementById("root").onclick = function () { displayButtonInfo('root'); };
+// document.getElementById("root").onclick = function () { displayButtonInfo('root'); };
 document.getElementById("cloud").onclick = function () { displayButtonInfo('cloud'); };
 // document.getElementById("back").onclick = function () { displayButtonInfo('back'); };
 document.getElementById("settings").onclick = function () { displayButtonInfo('settings'); };
@@ -29,7 +29,6 @@ document.getElementById("settings").onclick = function () { displayButtonInfo('s
 // document.getElementById("=").onclick = function () { displayButtonInfo('='); };
 // document.getElementById("0").onclick = function () { displayButtonInfo('0'); };
 document.getElementById("+-").onclick = function () { displayButtonInfo('+-'); };
-document.getElementById("darkmode").onclick = function () { changemode(); };
 // element.addEventListener('click', ()=> {
 //     alert(element.textContent);
 // })
@@ -45,7 +44,10 @@ document.getElementById("info").onclick = function () { myFunction(); };
 function myFunction() {
     alert('Hagar Laks\n Version 0.0.1\n My Calculator');
 }
-function changemode() {
-    var element = document.body;
-    element.classList.toggle("dark");
-}
+// function changemode(){
+//     let elements = document.querySelectorAll('.tochange');
+//     elements.forEach(element=>{
+//         element.addEventListener('click',.toggle("dark");
+// }
+// const light = document.querySelector("#darkmode");
+// light.addEventListener('click',changemode);
