@@ -55,6 +55,13 @@ function myFunction() {
 //     elements.forEach(element=>{
 //         element.addEventListener('click',.toggle("dark");
 // }
-// const light = document.querySelector("#darkmode");
+const light = document.querySelector("#darkmode");
 
-// light.addEventListener('click',changemode);
+light.addEventListener('click',changemode);
+
+
+function changemode() {
+let el = document.querySelector(".container");
+ el.classList.toggle("dark");
+ console.log(el);
+}
