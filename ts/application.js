@@ -73,6 +73,7 @@ function buttononsci() {
     currentVal = '';
     printing(currentVal);
     cantype = true;
+    operatorcount = 0;
     if (scientificModeFlag === true) {
         scientificModeFlag = false;
     }

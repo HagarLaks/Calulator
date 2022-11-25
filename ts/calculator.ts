@@ -65,6 +65,8 @@ digits.forEach(digit => {
             else {
                 if (binoperator != '') {
                     currentVal = currentVal+binoperator;
+                    operatorcount +=1
+
                     addToCurrentVal(digit)
                     printing(currentVal)
                     binoperator = '';
@@ -94,6 +96,7 @@ digits.forEach(digit => {
                 else {
                     if (binoperator != '') {
                         currentVal = currentVal+binoperator;
+                        operatorcount +=1
                         addToCurrentVal(digit)
                         printing(currentVal)
                         binoperator = '';
@@ -123,7 +126,7 @@ function updateFirstOperator(value){
     binoperator = value.id;
         // alert(binoperator);
         console.log(value.id);
-        operatorcount +=1;
+        
 }
 
 const boperators = document.querySelectorAll('.boperator');
@@ -132,37 +135,42 @@ boperators.forEach(boperator => {
         console.log(binoperator, event);
         //oparators simple mode
         if (scientificModeFlag===false){
-
         
-        if ((currentVal.includes('*')||currentVal.includes('-')||currentVal.includes('/')||currentVal.includes('+'))&&cantype===true ){
-            updateFirstOperator(boperator);
-            evalClicked();
-            binoperator = '';
-            addToCurrentVal(boperator)
-            printing(currentVal);
-            cantype=true;
-         }
-
-            else  {
+            if ((operatorcount == 1) && (cantype===true )){
+                updateFirstOperator(boperator);
+                evalClicked();
+                binoperator = '';
+                addToCurrentVal(boperator)
+                printing(currentVal);
+                cantype=true;
+                }
+            else {
        
-                
-                updateFirstOperator(boperator); 
-                printing(boperator.id)
-            }
-            }
+                    updateFirstOperator(boperator); 
+                    printing(boperator.id)
+                    }
+                }
+        
             //oparators scientific mode
-                if ((operatorcount ==2) && (cantype==true)){
+            if ((operatorcount ==2) && (cantype==true)){
                     updateFirstOperator(boperator);
                     evalClicked();
                     binoperator = '';
-                    addToCurrentVal(boperator)
+                    addToCurrentVal(boperator);
                     printing(currentVal);
                     cantype=true;
 
             }
-            else if (scientificModeFlag ===true){
-                    updateFirstOperator(boperator); 
-                    printing(boperator.id)
+            if (scientificModeFlag ===true){
+                    if (operatorcount == 1){
+                        updateFirstOperator(boperator); 
+                        printing(boperator.id);
+                    }
+                    else {
+                        updateFirstOperator(boperator); 
+                        printing(boperator.id);
+                    }
+                    
                 }
             
                 
