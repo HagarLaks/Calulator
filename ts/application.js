@@ -3,7 +3,7 @@
 function displayButtonInfo(value) {
     alert(value);
 }
-document.getElementById("delhistory").addEventListener('click', function () { displayButtonInfo(document.getElementById('delhistory').id); });
+// document.getElementById("delhistory").addEventListener('click', function() {displayButtonInfo(document.getElementById('delhistory').id)});
 // document.getElementById("darkmode").onclick = function () { displayButtonInfo('darkmode'); };
 // document.getElementById("root").onclick = function () { displayButtonInfo('root'); };
 document.getElementById("cloud").onclick = function () { displayButtonInfo('cloud'); };
@@ -33,11 +33,11 @@ document.getElementById("+-").onclick = function () { displayButtonInfo('+-'); }
 //     alert(element.textContent);
 // })
 // const element = document.getElementById("clock");
-const button = document.getElementsByClassName("button");
-const operator = document.getElementsByClassName("operator");
-const func = document.getElementsByClassName("func");
-// const digits = document.getElementsByClassName("digits");
-// for (let i = 0; i < button.length; i++) {
+// const button = document.getElementsByClassName("button");
+// const operator = document.getElementsByClassName("operator");
+// const func = document.getElementsByClassName("func");
+// // const digits = document.getElementsByClassName("digits");
+// // for (let i = 0; i < button.length; i++) {
 //     button[i].addEventListener('click', displayButtonInfo(button));
 // }
 document.getElementById("info").onclick = function () { myFunction(); };
@@ -54,5 +54,34 @@ light.addEventListener('click', changemode);
 function changemode() {
     let el = document.querySelector(".container");
     el.classList.toggle("dark");
+    console.log(el);
+}
+const delhistory = document.querySelector("#delhistory");
+delhistory.addEventListener('click', hidehistory);
+function hidehistory() {
+    let el = document.querySelector(".hiddenh");
+    el.classList.toggle("history");
+    console.log(el);
+}
+const scientificmode = document.querySelector("#scientificmode");
+scientificmode.addEventListener('click', hidescientific);
+scientificmode.addEventListener('click', buttononsci);
+function buttononsci() {
+    let el = document.querySelector("#scientificmode");
+    el.classList.toggle("buttonon");
+    console.log(el);
+    currentVal = '';
+    printing(currentVal);
+    cantype = true;
+    if (scientificModeFlag === true) {
+        scientificModeFlag = false;
+    }
+    else {
+        scientificModeFlag = true;
+    }
+}
+function hidescientific() {
+    let el = document.querySelector(".hiddens");
+    el.classList.toggle("scientific");
     console.log(el);
 }
