@@ -6,7 +6,6 @@
   "scripts": {
     "build": "sass src/style.scss src/main.css",
     "build-ts": "tsc ts/application.ts ts/calculator.ts",
-    "dev-server": "http-server src",
     "dev-sass": "sass src/main.scss src/main.css --watch",
     "dev": "npm run dev-server & npm run dev-sass",
     "start": "echo \"No start script\" && exit 0",
