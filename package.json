@@ -26,8 +26,6 @@
     "live-server": "^1.2.2",
     "sass": "^1.56.1"
   },
-  "dependencies": {
-    "http-server": "^14.1.1"
-  }
+  
 }
 
