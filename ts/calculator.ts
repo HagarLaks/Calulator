@@ -140,8 +140,6 @@ boperators.forEach(boperator => {
                 
   });
 
-
-
 });
 
 const decpoint = document.getElementById('.');
