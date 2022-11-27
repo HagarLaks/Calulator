@@ -1,43 +1,10 @@
-// interface state {
-//     firstOperand:string | null;
-//     currentOperand:string | null;
-//     secondOperand:string | null;
-//     canTypeDigit:boolean;
-//     canTypeOperand:boolean;
-//     canSum:boolean;
-// }
 
-// //flags:
-// let state: state = {
-    
-//     firstOperand: null,
-//     currentOperand: null,
-//     secondOperand: null,
-//     canTypeDigit: true,
-//     canTypeOperand: false,
-//     canSum:false,
-
-// };
 
 let currentVal:string = '';
 let binoperator:string = '';
 let cantype:boolean = true;
 let scientificModeFlag:boolean = false;
 let operatorcount:number = 0;
-
-// let firstVal:string = '';
-
-// //flag updading
-// function stateUpdate(){
-//     if(currentVal === ''){
-//         state.canTypeDigit = true;
-//     }
-//     if (currentVal[-1].includes('+-\*')){
-//         state.canTypeDigit = true;
-//     }
-
-// }
-
 
 const digits = document.querySelectorAll('.digits');
 function addToCurrentVal(value){
@@ -46,8 +13,6 @@ function addToCurrentVal(value){
     console.log(currentVal);
     printing(currentVal)
 }
-
-
 
 digits.forEach(digit => {
     digit.addEventListener('click', function handleClick(event) {
@@ -124,7 +89,6 @@ digits.forEach(digit => {
 
 function updateFirstOperator(value){
     binoperator = value.id;
-        // alert(binoperator);
         console.log(value.id);
         
 }
@@ -195,9 +159,7 @@ decpoint.addEventListener('click', function decpointpressed(event) {
                 printing(currentVal)
             }
     }
-    // if (binoperator != ) {
-    //     alert('invalid')
-    // }
+    
 });
 const evalBtn = document.getElementById('=');
 
